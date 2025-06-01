@@ -22,8 +22,6 @@ Este projeto foi desenvolvido para testar meus conhecimentos sobre estrutura de 
 
 - **Linguagens:** TypeScript, HTML5
 - **Estilização:** TailwindCSS
-- **Empacotador/Bundler:** Vite
-- **Backend:** Node.js + Express
 - **Banco de Dados:** MongoDB
 - **Containerização:** Docker & Docker Compose
 - **Servidor Web (Frontend):** NGINX
