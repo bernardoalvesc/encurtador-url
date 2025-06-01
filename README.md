@@ -47,9 +47,10 @@ Este projeto utiliza **Docker** e **docker-compose** para facilitar a execução
 ### Passos para rodar
 
 1. Clone o repositório: git clone https://github.com/bernardoalvesc/encurtador-url
-2. Suba os containers: docker-compose up --build
-3. Acesse a aplicação: Frontend: http://localhost:8080
-4. Parar os containers: docker-compose down
+2. Abra o docker
+3. Suba os containers: docker-compose up --build
+4. Acesse a aplicação: Frontend: http://localhost:8080
+5. Parar os containers: docker-compose down
 
 Após isso, você já pode começar a encurtar URLs e testá-las na interface.
 ---
