@@ -1,17 +1,50 @@
-# Ignora dependências
-node_modules/
 
-# Ignora arquivos de build do TypeScript
-dist/
+# Node / Yarn / TypeScript
 
-# Ignora arquivos de log
-logs/
+**/node_modules/
+**/dist/
+**/logs/
 *.log
 
-# Ignora arquivos de ambiente
-.env
-.env.*
 
-# Ignora configurações locais
+package-lock.json
+
+
+# Docker
+docker-compose.override.yml
+*.local.yml
+.docker/
+
+# Nginx (frontend)
+frontend/nginx.conf~
+
+
+# Sistemas operacionais
+
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+
+# IDEs / editores
+
 .vscode/
-.DS_Store
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+
+# Build temporários ou arquivos de CI
+
+coverage/
+*.tgz
+*.gz
+*.zip
+*.bak
+*.swp
+*.tmp
+
+# Git
+
+*.orig
