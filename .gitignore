@@ -1,42 +1,35 @@
-
-# Node / Yarn / TypeScript
-
+# Node.js / Yarn / TypeScript
 **/node_modules/
 **/dist/
 **/logs/
 *.log
-
-
 package-lock.json
-
+yarn-error.log
 
 # Docker
 docker-compose.override.yml
 *.local.yml
 .docker/
 
-# Nginx (frontend)
+# Logs da aplicação
+*.log
+
+# Nginx temporário
 frontend/nginx.conf~
 
-
 # Sistemas operacionais
-
 Thumbs.db
 ehthumbs.db
 Icon?
 Desktop.ini
 
-
-# IDEs / editores
-
+# IDEs e editores
 .vscode/
 .idea/
 *.sublime-project
 *.sublime-workspace
 
-
-# Build temporários ou arquivos de CI
-
+# Arquivos temporários e de build
 coverage/
 *.tgz
 *.gz
@@ -45,6 +38,5 @@ coverage/
 *.swp
 *.tmp
 
-# Git
-
+# Git conflitos e backups
 *.orig
