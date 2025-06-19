@@ -8,5 +8,7 @@ RUN yarn install
 COPY . .
 RUN yarn build
 
+RUN mkdir -p logs
+
 EXPOSE 3000
 CMD ["node", "dist/index.js"]

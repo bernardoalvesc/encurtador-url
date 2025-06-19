@@ -1,22 +1,19 @@
-import { Request, Response, NextFunction } from "express";
-import { logger } from "./logger";
+import morgan from "morgan";
+import fs from "fs";
+import path from "path";
 
-// Middleware que registra tempo de resposta de cada requisição
-export const logMiddleware = (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
-  const start = process.hrtime(); // marca o tempo de início
+// Garante que a pasta "logs" exista
+const logDir = path.join(__dirname, "../../logs");
+if (!fs.existsSync(logDir)) {
+  fs.mkdirSync(logDir, { recursive: true });
+}
 
-  res.on("finish", () => {
-    const [sec, nano] = process.hrtime(start); // calcula o tempo decorrido
-    const durationMs = (sec * 1000 + nano / 1e6).toFixed(2); // converte p/ ms
+// Cria um stream para escrever no arquivo access.log
+const accessLogStream = fs.createWriteStream(path.join(logDir, "access.log"), {
+  flags: "a", // adiciona no final sem sobrescrever
+});
 
-    logger.info(
-      `${req.method} ${req.url} - ${res.statusCode} - ${durationMs} ms`
-    );
-  });
-
-  next();
-};
+// Cria e exporta o middleware do morgan
+export const logMiddleware = morgan("combined", {
+  stream: accessLogStream,
+});

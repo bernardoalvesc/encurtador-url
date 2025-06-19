@@ -1,8 +1,17 @@
 import winston from "winston";
+import path from "path";
+import fs from "fs";
 
-// Cria e exporta o logger com dois destinos: console e arquivo
+// Garante que a pasta logs/ exista
+const logDir = path.join(__dirname, "../../logs");
+if (!fs.existsSync(logDir)) {
+  fs.mkdirSync(logDir, { recursive: true });
+}
+
+const logFilePath = path.join(logDir, "app.log");
+
 export const logger = winston.createLogger({
-  level: "info", // níveis: error, warn, info, http, verbose, debug, silly
+  level: "info",
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.printf(({ timestamp, level, message }) => {
@@ -10,7 +19,7 @@ export const logger = winston.createLogger({
     })
   ),
   transports: [
-    new winston.transports.Console(), // loga no terminal
-    new winston.transports.File({ filename: "logs/app.log" }), // salva em logs/app.log
+    new winston.transports.Console(),
+    new winston.transports.File({ filename: logFilePath }), //  caminho absoluto garantido
   ],
 });

@@ -11,13 +11,15 @@ services:
       - MONGO_URI=mongodb://mongo:27017/encurtador
     depends_on:
       - mongo
+    volumes:
+      - ./backend/logs:/app/logs
 
   encurtador-frontend:
     build: ./frontend
     container_name: encurtador-frontend
     restart: always
     ports:
-      - "8080:80" # acesso no navegador: http://localhost:8080
+      - "8080:80"
     depends_on:
       - encurtador-backend
 
