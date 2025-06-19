@@ -1,4 +1,5 @@
 import app from "./app";
+
 import { connectDB } from "./config/db";
 
 const PORT = 3000;
