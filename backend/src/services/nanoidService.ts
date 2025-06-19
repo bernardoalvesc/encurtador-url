@@ -1,6 +1,5 @@
-import { nanoid } from "nanoid"; // Importa o nanoid para gerar IDs únicos
+import shortid from "shortid";
 
-// Função que gera um ID de 7 caracteres
 export const generateId = () => {
-  return nanoid(7);
+  return shortid.generate(); // Gera e retorna o ID curto
 };
