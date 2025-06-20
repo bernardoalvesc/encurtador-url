@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { shortenUrl, redirectUrl } from "../controllers/shortenerController";
+
 // Importa os controladores responsáveis pelas ações
 
 const router = Router(); // Cria uma nova instância de roteador

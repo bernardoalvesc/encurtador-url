@@ -1,13 +1,19 @@
 import { Request, Response, NextFunction } from "express";
-import { logger } from "./logger";
+import { errorLogger } from "../utils/logger";
 
-// Middleware que captura e loga erros da aplicação
+// Middleware para capturar erros não tratados
 export const errorMiddleware = (
   err: Error,
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
-  logger.error(`Erro em ${req.method} ${req.url}: ${err.stack}`);
-  res.status(500).json({ message: "Erro interno do servidor." });
+  errorLogger.error({
+    message: err.message,
+    stack: err.stack,
+    method: req.method,
+    url: req.originalUrl,
+  });
+
+  res.status(500).json({ error: "Erro interno do servidor" });
 };
