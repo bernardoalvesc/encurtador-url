@@ -134,3 +134,13 @@ Caso contrário, retorna `404 - URL não encontrada`.
 ## 📄 Licença
 
 Projeto desenvolvido por Bernardo Alves. Livre para fins educacionais.
+
+---
+
+## 👤 Contato
+
+Sinta-se à vontade para entrar em contato comigo:
+
+- **LinkedIn:** linkedin.com/in/bernardoalvesdev
+- **E-mail:** bernardoalvesdev@gmail.com
+- **Portfólio:** https://www.bernardoalvesdev.com.br
