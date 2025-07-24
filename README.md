@@ -1,6 +1,6 @@
 # 🔗 Encurtador de URLs
 
-Projeto completo de encurtador de URLs, com backend em Node.js + TypeScript, frontend em HTML + TailwindCSS, e persistência em MongoDB. A aplicação possui logging estruturado, estrutura de projeto modular, e está pronta para uso local via Docker ou execução direta.
+Projeto completo de encurtador de URLs, com backend em Node.js + TypeScript, frontend em HTML + TailwindCSS, e persistência em MongoDB. A aplicação possui logging estruturado, estrutura de projeto modular, e está pronta para uso local via Docker ou execução direta. Esse projeto fez parte da minha entrevista técnica para conseguir minha vaga como desenvolvedor júnior.
 
 ---
 
